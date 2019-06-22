@@ -22,9 +22,9 @@ Category Template:
 cap=cv2.VideoCapture(0)
 while(True):
     ret,frame=cap.read()
-    frame=cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
-    frame=frame[:,81:561]
+    frame=frame[:,81:561,:]
     cv2.imshow("CAMERA",frame)
+    frame=cv2.resize(frame,(64,64))
     c=cv2.waitKey(1)
     if c==ord('r'):
         f=open("data/rock/rock.txt",'r')
