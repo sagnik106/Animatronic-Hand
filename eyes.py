@@ -29,7 +29,7 @@ while(True):
     elif(pred[1]==m):
         print("Paper")
     elif(pred[2]==m):
-        print("Scisors")
+        print("Scissors")
     
 #release video object
     c=cv2.waitKey(1)
